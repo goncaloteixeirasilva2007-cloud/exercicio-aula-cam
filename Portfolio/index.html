@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Gonçalo Silva</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      line-height: 1.4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Navegação */
+    nav {
+      background: #da9191;
+      padding: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Secções */
+    section {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    /* Container das imagens */
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap; /* permite quebrar linha em ecrãs pequenos */
+      gap: 15px; /* espaço entre imagens */
+      justify-content: center;
+    }
+
+    .portfolio-container img {
+      max-width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .portfolio-container img:hover {
+      transform: scale(1.05); /* efeito hover leve */
+    }
+
+    footer {
+      background: #e68989;
+      color: rgb(84, 20, 20);
+      text-align: center;
+      padding: 10px;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navegação -->
+  <nav>
+    <a href="/index.html">Sobre Mim</a>
+    <a href="/Temposlivres/index.html">Tempos livres</a>
+    <a href="/Portfolio/index.html">Portfólio</a>
+    <a href="/Contactos/index.html">Redes sociais</a>
+  </nav>
+
+  <!-- Secção Portfólio -->
+  <section>
+    <h1>O meu Portfólio</h1>
+    <p>Aqui estão algumas fotos de meus projetos e de momentos.</p>
+
+    <div class="portfolio-container">
+      <img src="../img/eua.jpeg" alt="Projeto 1">
+      <img src="../img/IMG_5660.jpeg" alt="Projeto 2">
+      <img src="../img/IMG_5671.jpeg" alt="Projeto 3">
+      <img src="../img/IMG_5678.jpeg" alt="Projeto 4">
+      <img src="../img/IMG_5750.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5784.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5812.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5818.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5820.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5945.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_5955.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_6095.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_7138.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_7566.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_7593.jpeg" alt="Projeto 5">
+      <img src="../img/IMG_7598.jpeg" alt="Projeto 5">
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 - Criado por Gonçalo Silva</p>
+  </footer>
+
+</body>
+</html>
