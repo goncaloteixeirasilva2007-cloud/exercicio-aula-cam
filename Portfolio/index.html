@@ -4,71 +4,86 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio - Gonçalo Silva</title>
+
+  <!-- Fonte Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
     body {
-      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
-      line-height: 1.4;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.8;
     }
 
     /* Navegação */
     nav {
-      background: #da9191;
-      padding: 8px;
-      width: 100%;
+      background: #4a6fa5;
+      padding: 15px;
       text-align: center;
+      position: sticky;
+      top: 0;
     }
 
     nav a {
       color: white;
-      margin: 0 8px;
+      margin: 0 15px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
+      transition: color 0.3s;
     }
 
-    /* Secções */
+    nav a:hover {
+      color: #ffd369;
+    }
+
+    /* Secção */
     section {
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 0 15px;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 0 20px;
       text-align: center;
     }
 
     h1 {
-      margin-bottom: 15px;
+      color: #4a6fa5;
+      margin-bottom: 20px;
     }
 
-    /* Container das imagens */
+    section p {
+      margin-bottom: 20px;
+      font-size: 1.1em;
+    }
+
+    /* Container Portfólio */
     .portfolio-container {
       display: flex;
-      flex-wrap: wrap; /* permite quebrar linha em ecrãs pequenos */
-      gap: 15px; /* espaço entre imagens */
+      flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
     }
 
     .portfolio-container img {
-      max-width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
+      max-width: 220px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     .portfolio-container img:hover {
-      transform: scale(1.05); /* efeito hover leve */
+      transform: scale(1.05);
+      box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     }
 
+    /* Rodapé */
     footer {
-      background: #e68989;
-      color: rgb(84, 20, 20);
+      background: #4a6fa5;
+      color: white;
       text-align: center;
-      padding: 10px;
-      width: 100%;
-      margin-top: 20px;
+      padding: 15px;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -85,7 +100,7 @@
   <!-- Secção Portfólio -->
   <section>
     <h1>O meu Portfólio</h1>
-    <p>Aqui estão algumas fotos de meus projetos e de momentos.</p>
+    <p>Aqui estão algumas fotos dos meus projetos e momentos especiais.</p>
 
     <div class="portfolio-container">
       <img src="../img/eua.jpeg" alt="Projeto 1">
@@ -93,18 +108,17 @@
       <img src="../img/IMG_5671.jpeg" alt="Projeto 3">
       <img src="../img/IMG_5678.jpeg" alt="Projeto 4">
       <img src="../img/IMG_5750.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5784.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5812.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5818.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5820.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5945.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_5955.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_6095.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_7138.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_7566.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_7593.jpeg" alt="Projeto 5">
-      <img src="../img/IMG_7598.jpeg" alt="Projeto 5">
-
+      <img src="../img/IMG_5784.jpeg" alt="Projeto 6">
+      <img src="../img/IMG_5812.jpeg" alt="Projeto 7">
+      <img src="../img/IMG_5818.jpeg" alt="Projeto 8">
+      <img src="../img/IMG_5820.jpeg" alt="Projeto 9">
+      <img src="../img/IMG_5945.jpeg" alt="Projeto 10">
+      <img src="../img/IMG_5955.jpeg" alt="Projeto 11">
+      <img src="../img/IMG_6095.jpeg" alt="Projeto 12">
+      <img src="../img/IMG_7138.jpeg" alt="Projeto 13">
+      <img src="../img/IMG_7566.jpeg" alt="Projeto 14">
+      <img src="../img/IMG_7593.jpeg" alt="Projeto 15">
+      <img src="../img/IMG_7598.jpeg" alt="Projeto 16">
     </div>
   </section>
 
@@ -114,3 +128,4 @@
 
 </body>
 </html>
+
