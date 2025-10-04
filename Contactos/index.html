@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contactos - Gonçalo Silva</title>
+  <title>Redes Sociais - Gonçalo Silva</title>
 
   <!-- Fonte Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
 
   <style>
     body {
@@ -23,11 +26,13 @@
 
     /* Navegação */
     nav {
-      background: #4a6fa5;
+      background: linear-gradient(90deg, #4a6fa5, #698dc5);
       padding: 15px;
       text-align: center;
       position: sticky;
       top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     nav a {
@@ -36,19 +41,37 @@
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
+      padding-bottom: 5px;
     }
 
     nav a:hover {
       color: #ffd369;
     }
 
-    /* Secções */
-    section {
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-      text-align: center;
+    nav a.ativo {
+      border-bottom: 2px solid #ffd369;
+    }
+
+    main {
       flex: 1;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+      padding: 30px 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1 {
@@ -70,7 +93,6 @@
       margin-top: 20px;
     }
 
-    /* Cada caixa de contacto */
     .contacto-box {
       display: flex;
       flex-direction: column;
@@ -90,6 +112,7 @@
       height: 100px;
       object-fit: contain;
       margin-bottom: 12px;
+      transition: transform 0.3s;
     }
 
     .contacto-box span {
@@ -104,52 +127,61 @@
 
     /* Rodapé */
     footer {
-      background: #4a6fa5;
+      background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white;
       text-align: center;
       padding: 15px;
       width: 100%;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Responsividade */
+    @media (max-width: 500px) {
+      h1 { font-size: 1.5em; }
+      .contacto-box { width: 140px; }
+      .contacto-box img { width: 80px; height: 80px; }
+      nav a { display: inline-block; margin: 8px; }
     }
   </style>
 </head>
 <body>
 
   <!-- Navegação -->
- <nav>
-  <a href="../index.html">Sobre Mim</a>
-  <a href="../Temposlivres/index.html">Tempos Livres</a>
-  <a href="../Portfolio/index.html">Portfólio</a>
-  <a href="index.html">Redes sociais</a>
-</nav>
+  <nav>
+    <a href="../index.html">Sobre Mim</a>
+    <a href="../Temposlivres/index.html">Tempos Livres</a>
+    <a href="../Portfolio/index.html">Portfólio</a>
+    <a href="index.html" class="ativo">Redes Sociais</a>
+  </nav>
 
+  <main>
+    <!-- Secção Contactos -->
+    <section>
+      <h1>As minhas Redes Sociais</h1>
+      <p>Podes encontrar-me nas minhas redes sociais:</p>
 
-  <!-- Secção Contactos -->
-  <section>
-    <h1>As minhas Redes Sociais</h1>
-    <p>Podes encontrar-me nas minhas redes sociais:</p>
+      <div class="contactos">
+        <a href="https://www.instagram.com/silvinha_28_/" target="_blank" rel="noopener noreferrer" class="contacto-box">
+          <img src="../img/Instagram-Logo.png" alt="Instagram">
+          <span>Instagram</span>
+        </a>
 
-    <div class="contactos">
-      <a href="https://www.instagram.com/silvinha_28_/" target="_blank" class="contacto-box">
-        <img src="../img/Instagram-Logo.png" alt="Instagram">
-        <span>Instagram</span>
-      </a>
+        <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank" rel="noopener noreferrer" class="contacto-box">
+          <img src="../img/Spotify-Emblem.png" alt="Spotify">
+          <span>Spotify</span>
+        </a>
 
-      <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank" class="contacto-box">
-        <img src="../img/Spotify-Emblem.png" alt="Spotify">
-        <span>Spotify</span>
-      </a>
-
-      <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank" class="contacto-box">
-        <img src="../img/GitHub-Logo.png" alt="GitHub">
-        <span>GitHub</span>
-      </a>
-    </div>
-  </section>
+        <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank" rel="noopener noreferrer" class="contacto-box">
+          <img src="../img/GitHub-Logo.png" alt="GitHub">
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 - Criado por Gonçalo Silva</p>
+    <p>© Criado por Gonçalo Silva</p>
   </footer>
 
 </body>
 </html>
-

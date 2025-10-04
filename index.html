@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Pessoal</title>
+  <title>Página Pessoal - Gonçalo Silva</title>
 
   <!-- Fonte Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   <style>
     body { 
@@ -20,11 +23,13 @@
 
     /* Navegação */
     nav { 
-      background: #4a6fa5; 
+      background: linear-gradient(90deg, #4a6fa5, #698dc5);
       padding: 15px; 
       text-align: center;
       position: sticky;
       top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
     nav a { 
       color: white; 
@@ -32,17 +37,35 @@
       text-decoration: none; 
       font-weight: 500;
       transition: color 0.3s;
+      padding-bottom: 5px;
     }
     nav a:hover { 
       color: #ffd369; 
     }
+    nav a.ativo {
+      border-bottom: 2px solid #ffd369;
+    }
 
-    /* Secções */
+    /* Estrutura */
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
     section { 
-      max-width: 800px; 
-      margin: 50px auto; 
-      padding: 0 20px; 
-      text-align: center; 
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+      padding: 30px 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1, h2 { 
@@ -50,7 +73,7 @@
       margin-bottom: 20px;
     }
 
-    section p, li { 
+    p, li { 
       margin-bottom: 15px; 
       font-size: 1.1em;
     }
@@ -62,6 +85,10 @@
       max-width: 250px; 
       border-radius: 50%; 
       box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
 
     /* Lista */
@@ -89,11 +116,19 @@
 
     /* Rodapé */
     footer { 
-      background: #4a6fa5; 
+      background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white; 
       text-align: center; 
       padding: 15px; 
       margin-top: 40px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Responsividade */
+    @media (max-width: 500px) {
+      h1, h2 { font-size: 1.5em; }
+      img { max-width: 180px; }
+      nav a { display: inline-block; margin: 8px; }
     }
   </style>
 </head>
@@ -101,49 +136,48 @@
 
   <!-- Navegação -->
   <nav>
-  <a href="index.html">Sobre Mim</a>
-  <a href="Temposlivres/index.html">Tempos Livres</a>
-  <a href="Portfolio/index.html">Portfólio</a>
-  <a href="Contactos/index.html">Redes sociais</a>
-</nav>
+    <a href="index.html" class="ativo">Sobre Mim</a>
+    <a href="Temposlivres/index.html">Tempos Livres</a>
+    <a href="Portfolio/index.html">Portfólio</a>
+    <a href="Contactos/index.html">Redes Sociais</a>
+  </nav>
 
-  <!-- Secções -->
-  <section id="Sobre mim">
-    <h1>Sobre Mim</h1>
-    <p>Olá! Eu sou Gonçalo Silva, e esta é a minha primeira página em HTML.</p>
-    <p>Tenho 18 anos, sou de Felgueiras e gosto muito de conviver.</p>
-    <p>Sou um rapaz reservado mas gosto imenso de estar com os meus amigos.</p>
-    <img src="img/goncalosilva.jpeg" alt="Foto de Gonçalo Silva">
-  </section>
+  <main>
+    <!-- Secção: Sobre Mim -->
+    <section id="sobre-mim">
+      <h1>Sobre Mim</h1>
+      <p>Olá! Eu sou o <strong>Gonçalo Silva</strong>, e esta é a minha primeira página em HTML.</p>
+      <p>Tenho 18 anos, sou de Felgueiras e gosto muito de conviver.</p>
+      <p>Sou um rapaz reservado, mas adoro passar tempo com os meus amigos e aproveitar os bons momentos.</p>
+      <img src="img/goncalosilva.jpeg" alt="Retrato de Gonçalo Silva">
+    </section>
 
-  <section id="Tempos livres">
-    <h2>O que gosto de fazer nos tempos livres</h2>
-    <ul>
-      <li>Jogar futebol</li>
-      <li>Ouvir música</li>
-      <li>Jogar vídeo jogos</li>
-      <li>Conviver com os amigos e a família</li>
-    </ul>
-  </section>
+    <!-- Secção: Tempos Livres -->
+    <section id="tempos-livres">
+      <h2>O que gosto de fazer nos tempos livres</h2>
+      <ul>
+        <li>Jogar futebol</li>
+        <li>Ouvir música</li>
+        <li>Jogar videojogos</li>
+        <li>Conviver com amigos e família</li>
+      </ul>
+    </section>
 
-  <section id="Redes Sociais">
-    <h2>Redes Sociais</h2>
-    <p>Podes encontrar-me nas redes sociais:</p>
-    <p>
-      <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank">GitHub</a> |
-      <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank">Spotify</a> |
-      <a href="https://www.instagram.com/silvinha_28_/" target="_blank">Instagram</a>
-    </p>
-  </section>
+    <!-- Secção: Redes Sociais -->
+    <section id="redes-sociais">
+      <h2>Redes Sociais</h2>
+      <p>Podes encontrar-me nas minhas redes:</p>
+      <p>
+        <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank" rel="noopener noreferrer">Spotify</a> |
+        <a href="https://www.instagram.com/silvinha_28_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 - Criado por Gonçalo Silva </p>
+    <p>© Criado por Gonçalo Silva</p>
   </footer>
 
 </body>
 </html>
-
-
-
-
-
