@@ -8,6 +8,9 @@
   <!-- Fonte Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -18,31 +21,24 @@
       line-height: 1.8;
     }
 
-    /* Menu Corrigido */
+    /* Navegação */
     nav {
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
-      padding: 10px 0;
+      padding: 15px;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
 
     nav a {
       color: white;
-      margin: 0 12px;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
-      padding: 10px 5px;
-      flex-shrink: 0;
+      padding-bottom: 5px;
     }
 
     nav a:hover {
@@ -84,6 +80,7 @@
       font-size: 1.1em;
     }
 
+    /* Container Portfólio */
     .portfolio-container {
       display: flex;
       flex-wrap: wrap;
@@ -103,6 +100,7 @@
       box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     }
 
+    /* Rodapé */
     footer {
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white;
@@ -116,13 +114,13 @@
     @media (max-width: 500px) {
       h1 { font-size: 1.5em; }
       .portfolio-container img { max-width: 140px; }
-      nav a { margin: 8px; padding: 10px 8px; font-size: 0.95em; }
+      nav a { display: inline-block; margin: 8px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Menu Corrigido -->
+  <!-- Navegação -->
   <nav>
     <a href="../index.html">Sobre Mim</a>
     <a href="../Temposlivres/index.html">Tempos Livres</a>
@@ -158,10 +156,11 @@
   </main>
 
   <footer>
-     <p>© Criado por Gonçalo Silva </p>
+    <p>© Criado por Gonçalo Silva</p>
   </footer>
 
 </body>
 </html>
+
 
 

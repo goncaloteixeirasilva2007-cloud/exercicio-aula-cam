@@ -8,6 +8,9 @@
   <!-- Fonte Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
   <style>
     body { 
       font-family: 'Poppins', sans-serif; 
@@ -18,53 +21,44 @@
       line-height: 1.8;
     }
 
-    /* Menu Corrigido */
-    nav {
+    /* Navegação */
+    nav { 
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
-      padding: 10px 0;
+      padding: 15px; 
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
-      display: flex;
-      justify-content: center;
-      flex-wrap: nowrap;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
     }
-
-    nav a {
-      color: white;
-      margin: 0 12px;
-      text-decoration: none;
+    nav a { 
+      color: white; 
+      margin: 0 15px; 
+      text-decoration: none; 
       font-weight: 500;
       transition: color 0.3s;
-      padding: 10px 5px;
-      flex-shrink: 0;
+      padding-bottom: 5px;
     }
-
-    nav a:hover {
-      color: #ffd369;
+    nav a:hover { 
+      color: #ffd369; 
     }
-
     nav a.ativo {
       border-bottom: 2px solid #ffd369;
     }
 
+    /* Estrutura */
     main {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 900px;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
-    section {
+    section { 
       background: white;
       border-radius: 12px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
       padding: 30px 20px;
-      margin: 20px auto 40px auto; /* topo uniforme */
+      margin-bottom: 40px;
       text-align: center;
       animation: fadeIn 0.8s ease-in;
     }
@@ -84,14 +78,20 @@
       font-size: 1.1em;
     }
 
+    /* Imagem */
     img { 
       display: block;
       margin: 20px auto; 
       max-width: 250px; 
       border-radius: 50%; 
       box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    img:hover {
+      transform: scale(1.05);
     }
 
+    /* Lista */
     ul { 
       list-style: none; 
       padding: 0; 
@@ -104,6 +104,7 @@
       max-width: 300px;
     }
 
+    /* Links redes sociais */
     section a { 
       color: #4a6fa5; 
       text-decoration: none; 
@@ -113,6 +114,7 @@
       text-decoration: underline; 
     }
 
+    /* Rodapé */
     footer { 
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white; 
@@ -126,13 +128,13 @@
     @media (max-width: 500px) {
       h1, h2 { font-size: 1.5em; }
       img { max-width: 180px; }
-      nav a { margin: 8px; padding: 10px 8px; font-size: 0.95em; }
+      nav a { display: inline-block; margin: 8px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Menu Corrigido -->
+  <!-- Navegação -->
   <nav>
     <a href="index.html" class="ativo">Sobre Mim</a>
     <a href="Temposlivres/index.html">Tempos Livres</a>
@@ -141,34 +143,34 @@
   </nav>
 
   <main>
-    <!-- Secção Sobre Mim -->
-    <section id="Sobre mim">
+    <!-- Secção: Sobre Mim -->
+    <section id="sobre-mim">
       <h1>Sobre Mim</h1>
-      <p>Olá! Eu sou Gonçalo Silva, e esta é a minha primeira página em HTML.</p>
+      <p>Olá! Eu sou o <strong>Gonçalo Silva</strong>, e esta é a minha primeira página em HTML.</p>
       <p>Tenho 18 anos, sou de Felgueiras e gosto muito de conviver.</p>
-      <p>Sou um rapaz reservado mas gosto imenso de estar com os meus amigos.</p>
-      <img src="img/goncalosilva.jpeg" alt="Foto de Gonçalo Silva">
+      <p>Sou um rapaz reservado, mas adoro passar tempo com os meus amigos e aproveitar os bons momentos.</p>
+      <img src="img/goncalosilva.jpeg" alt="Retrato de Gonçalo Silva">
     </section>
 
-    <!-- Secção Tempos Livres (Resumo) -->
-    <section>
+    <!-- Secção: Tempos Livres -->
+    <section id="tempos-livres">
       <h2>O que gosto de fazer nos tempos livres</h2>
       <ul>
         <li>Jogar futebol</li>
         <li>Ouvir música</li>
-        <li>Jogar vídeo jogos</li>
-        <li>Conviver com os amigos e a família</li>
+        <li>Jogar jogos</li>
+        <li>Conviver com amigos e família</li>
       </ul>
     </section>
 
-    <!-- Secção Redes Sociais -->
-    <section>
+    <!-- Secção: Redes Sociais -->
+    <section id="redes-sociais">
       <h2>Redes Sociais</h2>
-      <p>Podes encontrar-me nas redes sociais:</p>
+      <p>Podes encontrar-me nas minhas redes sociais:</p>
       <p>
-        <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank">GitHub</a> |
-        <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank">Spotify</a> |
-        <a href="https://www.instagram.com/silvinha_28_/" target="_blank">Instagram</a>
+        <a href="https://github.com/goncaloteixeirasilva2007-cloud" target="_blank" rel="noopener noreferrer">GitHub</a> |
+        <a href="https://open.spotify.com/user/goncaloteixeirasilva?si=fcbf5805474641fe" target="_blank" rel="noopener noreferrer">Spotify</a> |
+        <a href="https://www.instagram.com/silvinha_28_/" target="_blank" rel="noopener noreferrer">Instagram</a>
       </p>
     </section>
   </main>
@@ -179,4 +181,3 @@
 
 </body>
 </html>
-
