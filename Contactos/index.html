@@ -8,9 +8,6 @@
   <!-- Fonte Google -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- Favicon -->
-  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
-
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -24,24 +21,31 @@
       min-height: 100vh;
     }
 
-    /* Navegação */
+    /* Menu Corrigido */
     nav {
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
-      padding: 15px;
+      padding: 10px 0;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 10;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
-      padding-bottom: 5px;
+      padding: 10px 5px;
+      flex-shrink: 0;
     }
 
     nav a:hover {
@@ -84,7 +88,6 @@
       font-size: 1.1em;
     }
 
-    /* Container de contactos */
     .contactos {
       display: flex;
       justify-content: center;
@@ -125,28 +128,26 @@
       box-shadow: 0px 6px 16px rgba(0,0,0,0.2);
     }
 
-    /* Rodapé */
     footer {
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white;
       text-align: center;
       padding: 15px;
-      width: 100%;
+      margin-top: 40px;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
     }
 
-    /* Responsividade */
     @media (max-width: 500px) {
       h1 { font-size: 1.5em; }
       .contacto-box { width: 140px; }
       .contacto-box img { width: 80px; height: 80px; }
-      nav a { display: inline-block; margin: 8px; }
+      nav a { margin: 8px; padding: 10px 8px; font-size: 0.95em; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Navegação -->
+  <!-- Menu Corrigido -->
   <nav>
     <a href="../index.html">Sobre Mim</a>
     <a href="../Temposlivres/index.html">Tempos Livres</a>
@@ -180,7 +181,7 @@
   </main>
 
   <footer>
-    <p>© Criado por Gonçalo Silva</p>
+     <p>© Criado por Gonçalo Silva </p>
   </footer>
 
 </body>
