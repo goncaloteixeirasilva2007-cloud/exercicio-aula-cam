@@ -76,6 +76,12 @@
     p, li { 
       margin-bottom: 15px; 
       font-size: 1.1em;
+      text-align: justify; /* Texto justificado */
+    }
+
+    /* Centralizar texto da secção de Redes Sociais */
+    #redes-sociais p {
+      text-align: center;
     }
 
     /* Imagem */
@@ -114,14 +120,23 @@
       text-decoration: underline; 
     }
 
-    /* Rodapé */
+    /* Rodapé centralizado com flex */
     footer { 
       background: linear-gradient(90deg, #4a6fa5, #698dc5);
       color: white; 
-      text-align: center; 
-      padding: 15px; 
+      padding: 20px; 
+      font-weight: bold; 
+      font-size: 1.1em; 
       margin-top: 40px;
       box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+
+      display: flex;
+      justify-content: center; /* Centraliza horizontalmente */
+      align-items: center;     /* Centraliza verticalmente */
+    }
+
+    footer p {
+      margin: 0; /* Remove margem do parágrafo */
     }
 
     /* Responsividade */
@@ -146,9 +161,9 @@
     <!-- Secção: Sobre Mim -->
     <section id="sobre-mim">
       <h1>Sobre Mim</h1>
-      <p>Olá! Eu sou o <strong>Gonçalo Silva</strong>, e esta é a minha primeira página em HTML.</p>
-      <p>Tenho 18 anos, sou de Felgueiras e gosto muito de conviver.</p>
-      <p>Sou um rapaz reservado, mas adoro passar tempo com os meus amigos e aproveitar os bons momentos.</p>
+      <p>Olá! Eu sou o <strong>Gonçalo Silva</strong>, tenho 18 anos e sou natural de Felgueiras. Desde muito cedo, desenvolvi uma grande paixão por fotografia, o que me levou a escolher o curso de <strong>Comunicação Audiovisual e Multimédia</strong> na Universidade Lusófona do Porto. Sou uma pessoa reservada, mas adoro conviver com os amigos e família, pois acredito que os melhores momentos da vida são partilhados com aqueles que nos são próximos.</p>
+      <p>Nos meus tempos livres, adoro jogar futebol, ouvir música, explorar novas tecnologias e participar em atividades criativas. Também gosto de viajar sempre que possível, para conhecer novas culturas e experiências. O meu grande sonho é trabalhar como fotógrafo de algum clube de futebol, combinando a minha paixão pelo desporto com a minha dedicação à arte da fotografia.</p>
+      <p>Acredito que a dedicação, o empenho e a curiosidade são fundamentais para alcançar os meus objetivos. Estou sempre à procura de oportunidades que me permitam crescer pessoalmente e profissionalmente.</p>
       <img src="img/goncalosilva.jpeg" alt="Retrato de Gonçalo Silva">
     </section>
 
@@ -175,9 +190,13 @@
     </section>
   </main>
 
+  <!-- Rodapé centralizado -->
   <footer>
     <p>© Criado por Gonçalo Silva</p>
   </footer>
 
 </body>
 </html>
+
+
+
